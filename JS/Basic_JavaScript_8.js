@@ -32,7 +32,7 @@ function searchFunction() {
 //to string method
 function toStringFunction() {
     var number1 = document.getElementById("inputNumber").value;
-    var stringOne = number1.toString(10);
+    var stringOne = number1.toString();
     document.getElementById("toString").innerHTML = stringOne;
 }
 
