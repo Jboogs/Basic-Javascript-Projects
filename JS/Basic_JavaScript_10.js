@@ -75,3 +75,26 @@ function let_Keyword_Prac() {
     };
  document.getElementById("objectPrint").innerHTML = ski.webDescription();
    
+// break loop challenge
+
+var strBreak= "";
+var i;
+function breakLoop() {
+    for (i=0; i < 10; i++) {
+        if (i === 8) {break;}
+        strBreak += "This is number " + i + "<br>";
+    }
+    document.getElementById("breakPrac").innerHTML = strBreak;
+}
+
+//continue loop challenge, skips the iteration based off condition
+
+var strContinue= "";
+var i;
+function continueLoop() {
+    for (i=0; i < 10; i++) {
+        if (i === 8) {continue;}
+        strContinue += "This is number " + i + "<br>";
+    }
+    document.getElementById("continuePrac").innerHTML = strContinue;
+}
