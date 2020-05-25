@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang ="us-en">
-		<head>
-			<meta charset="utf-8">
-            <link rel="stylesheet" href="./CSS/Basic_CSS_1.css">
+	<head>
+	        <meta charset="utf-8">
+                <link rel="stylesheet" href="./CSS/Basic_CSS_1.css">
+                
             
-            
-		</head>
+	</head>
 
 	<body>
         <!--This is the HTML for the timer program-->
@@ -37,6 +37,8 @@
                         <div class="captiontext">Ski Photo 3</div>
                 </div>
 
+                
+
                 <!--Next and Previous buttons-->
                 <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -49,8 +51,38 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+
+
+        <!--This is the auto thumbnail slideshow-->
+
+        <div id="thumbSlide">
+                <div>
+                        <img src="./img/ski.jpg" alt="ski1" class="thumb">
+                </div>
+                <div>
+                        <img src="./img/xc_ski_image.jpg" alt="ski2" class="thumb">
+                </div>
+                <div>
+                        <img src="./img/xc_ski_image_1.jpg" alt="ski3" class="thumb">
+                </div>
+        </div>
 		
-	<script src="./JS/Basic_JavaScript_9.js"></script>	
+        <script src="./JS/Basic_JavaScript_9.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+                //This uses jquery for the JS aspect of my slideshow
+                $('#thumbSlide > div:gt(0)').hide();
+                setInterval(function() {
+                        $('thumbSlide > div:first')
+                        .fadeOut(1000)
+                        .next()
+                        .fadeIn(1000)
+                        .end()
+                        .appendTo('#thumbSlide');
+                }, 3000);
+
+
+        </script>	
 	</body>
 
 

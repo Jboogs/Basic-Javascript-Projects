@@ -93,3 +93,27 @@
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/*thumbnail auto slideshow with same images */
+
+.thumb {
+  height: 250px;
+  width: 250px;
+}
+
+#thumbSlide {
+  margin: 50px auto;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+}
+
+#thumbSlide > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}

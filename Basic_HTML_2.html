@@ -2,17 +2,41 @@
 <html lang ="us-en">
 		<head>
 			<meta charset="utf-8">
-            <link rel="stylesheet" href="">
+            <link rel="stylesheet" href="./CSS/CSS_challenge.css">
             <script src="./JS/Basic_JavaScript_2.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
             
 		</head>
 
 	<body id="body">
+                <script>
+                document.body.className += 'fade-out';
+                $(function() {
+                        $('body').removeClass('fade-out');
+                });
+                </script>
+                <h1 style="font-size: 5vw;">This Heading will resize when you resize a screen</h1>
 
-        <button onclick="myFunction()" id="button">Press this button!</button>
-        <p onmouseover="myFunction_color()" id="para">This text should be red and large</p>
+                <button onclick="myFunction()" id="button">Press this button!</button>
+                <p onmouseover="myFunction_color()" id="para">This text should be red and large</p>
         
-        <p id="concat" onclick="concatFunction()">You should click me</p>
+                <p id="concat" onclick="concatFunction()">You should click me</p>
+
+                <form name="form" action="/action_page.php" onsubmit="validateForm()" method="POST">
+                        <label for="phoneNumber">Phone Number:</label><br>
+                        <input type="number" id="pNumber" name="phone" value="Phone #...">
+                        
+                </form>
+
+        <script>
+                function validateForm() {
+                        var x = document.forms["form"]["pNumber"].value;
+                        if (x == "") {
+                                alert("Phone number must be filled out")
+                                return false;
+                        }
+                }
+        </script>
 	</body>
 
 
